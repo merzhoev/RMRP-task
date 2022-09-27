@@ -38,7 +38,7 @@ function getMinPositiveNum(numbers) {
   // если positiveNums будет пуст, в этом случае Math.min(...[]) === Infinity
   const minNum = Math.min(...positiveNums);
 
-  return minNum === Infinity ? 'doesn\'t exist' : minNum;
+  return isFinite(minNum) ? minNum : 'doesn\'t exist';
 }
 
 function getCountConsecutives(numbers) {
